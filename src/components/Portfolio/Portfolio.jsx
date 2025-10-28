@@ -10,16 +10,18 @@ import port6 from "../../assets/5.jpg";
 const Portfolio = () => {
   return (
     <div>
-      <section class="text-gray-600 body-font">
+      <section class=" body-font">
         <div class="container px-5 py-24 mx-auto flex flex-wrap">
           <div class="flex w-full mb-20 flex-wrap">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font lg:w-1/3 lg:mb-0 mb-4">
+            <h1 class="text-orange-700 font-bold sm:text-3xl text-2xl title-font lg:w-1/3 lg:mb-0 mb-4">
               PORTFOLIO
             </h1>
-            <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eum,
-              veritatis laudantium vero a nam ea consequuntur corrupti,
-              doloribus officiis itaque, aliquid sapiente ullam cumque?
+            <p class="text-orange-700 lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">
+              Welcome to my creative corner — a collection of projects,
+              campaigns, and candid moments that blend structure with
+              spontaneity. From corporate confidence to coastal calm, every
+              photo reflects a different facet of me — thoughtful, curious, and
+              always chasing the next bit of beautiful.
             </p>
           </div>
           <div class="flex flex-wrap md:-m-2 -m-1">
