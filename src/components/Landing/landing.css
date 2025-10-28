@@ -1,0 +1,69 @@
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden
+}
+
+video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #505050;
+    mix-blend-mode: overlay
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center
+}
+
+.heroText{
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+  animation-delay: 0s;
+}
+
+h4{
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+  animation-delay: 0.5s;
+}
+
+.heroBtn {
+  opacity: 0;
+  font-size: 15px;
+  width: 350px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin: 35px;
+  padding: 13px 90px;
+  border-radius: 50px;
+  border-color: transparent;
+  animation: fadeIn 0.5s ease-in forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) ;
+    visibility: visible;
+  }
+}
