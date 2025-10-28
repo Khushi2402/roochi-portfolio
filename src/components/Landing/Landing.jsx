@@ -14,12 +14,15 @@ const Hero = () => {
           <div className="overlay"></div>
           <div className="content fadeIn">
             <h1 className="heroText lg:text-8xl text-white text-5xl font-light tracking-widest">
-              JENNIE
+              ROOCHI
             </h1>
             <h4 className="lg:text-3xl text-white leading-tight mt-4">
               IN ACTION
             </h4>
-            <button href="/portfolio" className="heroBtn bg-black text-white px-24 py-4 tracking-widest mt-9 border">
+            <button
+              href="/portfolio"
+              className="heroBtn bg-black text-white px-24 py-4 tracking-widest mt-9 border"
+            >
               GO TO PORTFOLIO
             </button>
           </div>
@@ -116,7 +119,7 @@ const Hero = () => {
             </li>
           </ul>
         </div>
-      </section> 
+      </section>
     </>
   );
 };
