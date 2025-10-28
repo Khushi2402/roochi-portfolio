@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import contact from "../../assets/contact.jpg";
+import contact from "../../assets/1.jpg";
 const Contact = () => {
   return (
     <div>
@@ -119,6 +119,6 @@ const Contact = () => {
       </section>
     </div>
   );
-}
+};
 
-export default Contact
+export default Contact;

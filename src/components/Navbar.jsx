@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -13,14 +12,14 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <div className="flex fixed z-10 w-full">
-      <header className="absolute inset-x-0 top-0 z-50">
+      <header className="absolute inset-x-0 top-0 z-50 text-white">
         <nav
           aria-label="Global"
           className="flex items-center justify-between p-6 lg:px-8"
         >
           <div className="flex lg:flex-1">
             <a href="/" className="-m-1.5 p-1.5 font-bold">
-              Jennie's Portfolio
+              Roochi's Space
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -38,14 +37,14 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold leading-6 text-black"
+                className="text-sm font-semibold leading-6 text-white"
               >
                 {item.name}
               </a>
             ))}
             <a
               href="/contact"
-              className="text-sm font-semibold leading-6 text-black"
+              className="text-sm font-semibold leading-6 text-white"
             >
               Contact Me <span aria-hidden="true">&rarr;</span>
             </a>

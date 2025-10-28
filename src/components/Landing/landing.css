@@ -1,41 +1,42 @@
 .main {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #505050;
-    mix-blend-mode: overlay
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #505050;
+  mix-blend-mode: overlay;
 }
 
 .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-.heroText{
+.heroText {
   opacity: 0;
   animation: fadeIn 0.5s ease-in forwards;
   animation-delay: 0s;
+  font-family: "Pinyon Script", cursive;
 }
 
-h4{
+h4 {
   opacity: 0;
   animation: fadeIn 0.5s ease-in forwards;
   animation-delay: 0.5s;
@@ -63,7 +64,15 @@ h4{
   }
   100% {
     opacity: 1;
-    transform: translateY(0px) ;
+    transform: translateY(0px);
     visibility: visible;
   }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

@@ -16,9 +16,9 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
         <MainContent />
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </div>
   );

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import port1 from "../../assets/port1.jpg";
-import port2 from "../../assets/port2.jpg";
-import port3 from "../../assets/port3.jpg";
-import port4 from "../../assets/port4.jpg";
-import port5 from "../../assets/port5.jpg";
-import port6 from "../../assets/port6.jpg";
+import port1 from "../../assets/1.jpg";
+import port2 from "../../assets/11.jpg";
+import port3 from "../../assets/3.jpg";
+import port4 from "../../assets/4.jpg";
+import port5 from "../../assets/2.jpg";
+import port6 from "../../assets/5.jpg";
 
 const Portfolio = () => {
   return (
@@ -74,6 +74,6 @@ const Portfolio = () => {
       </section>
     </div>
   );
-}
+};
 
-export default Portfolio
+export default Portfolio;

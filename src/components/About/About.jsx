@@ -1,6 +1,6 @@
-import './about.css';
-import about1 from "../../assets/about.jpg";
-import about2 from "../../assets/about2.jpg";
+import "./about.css";
+import about1 from "../../assets/1.jpg";
+import about2 from "../../assets/2.jpg";
 
 const About = () => {
   return (
@@ -16,7 +16,16 @@ const About = () => {
                   </h2>
 
                   <p className="mt-4 text-gray-500 text-justify">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt odio ea illum quam error dolorem officia, facere corrupti facilis. Sunt vero doloremque ipsa quod culpa, accusamus deleniti provident necessitatibus officia earum laboriosam in accusantium! Maiores blanditiis hic repudiandae, suscipit ex fugit nostrum perspiciatis. Nesciunt iure nobis maxime facere totam obcaecati quis modi officiis, nemo qui excepturi non ullam distinctio corrupti optio assumenda illo explicabo expedita repellendus, quidem omnis in. Labore.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Incidunt odio ea illum quam error dolorem officia, facere
+                    corrupti facilis. Sunt vero doloremque ipsa quod culpa,
+                    accusamus deleniti provident necessitatibus officia earum
+                    laboriosam in accusantium! Maiores blanditiis hic
+                    repudiandae, suscipit ex fugit nostrum perspiciatis.
+                    Nesciunt iure nobis maxime facere totam obcaecati quis modi
+                    officiis, nemo qui excepturi non ullam distinctio corrupti
+                    optio assumenda illo explicabo expedita repellendus, quidem
+                    omnis in. Labore.
                   </p>
                 </header>
               </div>
@@ -94,6 +103,6 @@ const About = () => {
       </section>
     </>
   );
-}
+};
 
-export default About
+export default About;
