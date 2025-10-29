@@ -14,7 +14,7 @@ import About from "./components/About/About";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-orange-50">
       <Router>
         {/* <Navbar /> */}
         <MainContent />

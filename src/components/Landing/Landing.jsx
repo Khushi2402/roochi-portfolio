@@ -1,33 +1,18 @@
 import { motion } from "framer-motion";
 
 import "./landing.css";
-import videoBg from "../../assets/mainVideo.mp4";
 import img1 from "../../assets/1.jpg";
 import img11 from "../../assets/11.jpg";
-import img2 from "../../assets/2.jpg";
-import img22 from "../../assets/22.jpg";
 import img3 from "../../assets/3.jpg";
 import img33 from "../../assets/33.jpg";
 import img333 from "../../assets/333.jpg";
 import img4 from "../../assets/4.jpg";
 
-import cut1 from "../../assets/cut1.jpg";
-import cut2 from "../../assets/cut2.jpg";
-import cut3 from "../../assets/cut3.jpg";
-import cut4 from "../../assets/cut4.jpg";
-import cut5 from "../../assets/cut5.jpg";
-import cut6 from "../../assets/cut6.jpg";
-import cut7 from "../../assets/cut7.jpg";
-
-const stats = [
-  { id: 1, name: "Followers", value: "44 million" },
-  { id: 2, name: "Assets under holding", value: "$119 trillion" },
-  { id: 3, name: "New users annually", value: "46,000" },
-];
+import { carouselData } from "../../data/carouselData";
 
 const Hero = () => {
   return (
-    <div className="">
+    <div className="bg-orange-50">
       <section className="relative h-screen w-full overflow-hidden flex">
         {/* 🔹 Left Image (60%) */}
         <div className="w-[60%] h-full relative">
@@ -56,6 +41,14 @@ const Hero = () => {
             Roochi
           </h1>
         </div>
+
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+          className="absolute bottom-6 right-8 text-white text-sm tracking-widest opacity-80"
+        >
+          scroll ↓
+        </motion.div>
       </section>
 
       <section>
@@ -117,66 +110,31 @@ const Hero = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         {/* 🔹 Background Auto-Scrolling Gallery */}
         <motion.div
-          className="absolute top-0 left-0 flex w-[200%] h-full"
+          className="absolute top-0 left-0 flex h-full"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             repeat: Infinity,
             repeatType: "loop",
             ease: "linear",
-            duration: 20, // adjust for speed (lower = faster)
+            duration: 20,
           }}
         >
-          {/* Duplicate images for seamless loop */}
           {[...Array(2)].map((_, loopIndex) => (
-            <div key={loopIndex} className="flex w-1/2">
-              {[cut1, cut2, cut7, cut5, cut3, cut6, cut4].map((img, index) => (
+            <div key={loopIndex} className="flex">
+              {carouselData.map((item) => (
                 <img
-                  key={`${loopIndex}-${index}`}
-                  src={img}
-                  alt=""
-                  className="h-full w-[33.33%] object-cover"
+                  key={`${loopIndex}-${item.id}`}
+                  src={item.image}
+                  alt={`carousel-${item.id}`}
+                  className="h-full object-cover flex-shrink-0 w-[20vw]" // ✅ each image 20% of viewport width
                 />
               ))}
             </div>
           ))}
         </motion.div>
 
-        {/* 🔹 Overlay for text visibility */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-        {/* 🔹 Stats Content on Top */}
-        {/* <div className="relative z-10 text-center text-white px-6">
-          <motion.dl
-            className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ staggerChildren: 0.2 }}
-            variants={{
-              hidden: {},
-              visible: {},
-            }}
-          >
-            {stats.map((stat) => (
-              <motion.div
-                key={stat.id}
-                className="mx-auto flex max-w-xs flex-col gap-y-2"
-                variants={{
-                  hidden: { opacity: 0, y: 50 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              >
-                <dt className="text-sm md:text-base text-gray-200">
-                  {stat.name}
-                </dt>
-                <dd className="order-first text-3xl md:text-5xl font-semibold tracking-tight text-white">
-                  {stat.value}
-                </dd>
-              </motion.div>
-            ))}
-          </motion.dl>
-        </div> */}
+        {/* 🔹 Overlay for contrast */}
+        <div className="absolute inset-0 bg-zinc-950 bg-opacity-50"></div>
       </section>
 
       <section>
