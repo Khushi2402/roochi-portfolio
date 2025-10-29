@@ -116,7 +116,7 @@ const Hero = () => {
             repeat: Infinity,
             repeatType: "loop",
             ease: "linear",
-            duration: 20,
+            duration: 50,
           }}
         >
           {[...Array(2)].map((_, loopIndex) => (
