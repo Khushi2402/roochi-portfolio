@@ -15,7 +15,7 @@ const Hero = () => {
     <div className="bg-orange-50">
       <section className="relative h-screen w-full overflow-hidden flex">
         {/* 🔹 Left Image (60%) */}
-        <div className="w-[60%] h-full relative">
+        <div className="w-full md:w-[60%] h-full relative">
           <img
             src={img1}
             alt="Left visual"
@@ -23,8 +23,8 @@ const Hero = () => {
           />
         </div>
 
-        {/* 🔹 Right Image (40%) */}
-        <div className="w-[40%] h-full relative">
+        {/* 🔹 Right Image (40%) — hidden on mobile */}
+        <div className="hidden md:block w-[40%] h-full relative">
           <img
             src={img11}
             alt="Right visual"
@@ -126,7 +126,7 @@ const Hero = () => {
                   key={`${loopIndex}-${item.id}`}
                   src={item.image}
                   alt={`carousel-${item.id}`}
-                  className="h-full object-cover flex-shrink-0 w-[20vw]" // ✅ each image 20% of viewport width
+                  className="h-full object-cover flex-shrink-0 w-[50vw] sm:w-[33vw] md:w-[25vw] lg:w-[20vw]"
                 />
               ))}
             </div>

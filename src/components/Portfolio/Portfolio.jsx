@@ -42,9 +42,8 @@ const Portfolio = () => {
             </motion.h1>
 
             {/* <p className="text-orange-700 lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">
-              Welcome to my creative corner — a collection of projects,
-              campaigns, and candid moments that blend structure with
-              spontaneity...
+             
+Welcome to my creative corner — a collection of projects, campaigns, and candid moments that blend structure with spontaneity. From corporate confidence to coastal calm, every photo reflects a different facet of me — thoughtful, curious, and always chasing the next bit of beautiful.
             </p> */}
           </div>
 
@@ -126,7 +125,7 @@ const Portfolio = () => {
       {/* ===== Thank You Section ===== */}
       <section className="text-center py-20 bg-orange-50">
         <motion.h2
-          className="text-3xl font-bold text-orange-700 "
+          className="font-bold text-orange-700 text-2xl sm:text-3xl md:text-4xl"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
