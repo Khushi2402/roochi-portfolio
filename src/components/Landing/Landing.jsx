@@ -113,32 +113,19 @@ const Hero = () => {
 
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         {/* 🔹 Background Auto-Scrolling Gallery */}
-        <motion.div
-          className="absolute top-0 left-0 flex h-full"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "linear",
-            duration: 50,
-          }}
-        >
-          {[...Array(2)].map((_, loopIndex) => (
-            <div key={loopIndex} className="flex">
-              {carouselData.map((item) => (
-                <img
-                  key={`${loopIndex}-${item.id}`}
-                  src={item.image}
-                  alt={`carousel-${item.id}`}
-                  className="h-full object-cover flex-shrink-0 w-[50vw] sm:w-[33vw] md:w-[25vw] lg:w-[20vw]"
-                />
-              ))}
-            </div>
-          ))}
-        </motion.div>
-
-        {/* 🔹 Overlay for contrast */}
-        <div className="absolute inset-0 bg-zinc-950 bg-opacity-50"></div>
+        <div className="carousel-wrapper absolute inset-0 overflow-hidden">
+          <div className="carousel-track flex h-full animate-scroll">
+            {carouselData.concat(carouselData).map((item, index) => (
+              <img
+                key={index}
+                src={item.image}
+                alt={`carousel-${item.id}`}
+                className="h-full object-cover flex-shrink-0 w-[60vw] sm:w-[33vw] md:w-[25vw] lg:w-[20vw]"
+              />
+            ))}
+          </div>
+          <div className="absolute inset-0 bg-zinc-950 bg-opacity-50"></div>
+        </div>
       </section>
 
       <section>
