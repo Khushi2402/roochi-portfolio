@@ -4,13 +4,19 @@
   }
 
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
 .carousel-track {
-  animation: scroll 7s linear infinite;
-  will-change: transform;
+  animation: scroll 100s linear infinite;
+  /* increase time to match speed */
+  width: max-content;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .carousel-wrapper img {
