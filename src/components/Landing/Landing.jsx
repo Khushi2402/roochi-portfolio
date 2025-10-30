@@ -8,48 +8,52 @@ import img33 from "../../assets/33.jpg";
 import img333 from "../../assets/333.jpg";
 import img4 from "../../assets/4.jpg";
 
+import bgVideo from "../../assets/mainVideo.mp4";
+
 import { carouselData } from "../../data/carouselData";
 
 const Hero = () => {
   return (
     <div className="bg-orange-50">
-      <section className="relative h-screen w-full overflow-hidden flex">
-        {/* 🔹 Left Image (60%) */}
-        <div className="w-full md:w-[60%] h-full relative">
-          <img
-            src={img1}
-            alt="Left visual"
-            className="h-full w-full object-cover"
-          />
-        </div>
+<section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+  {/* 🔹 Background Video */}
+  <motion.video
+    src={bgVideo} // 👉 place your video in public/videos folder
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover"
+    initial={{ scale: 1.1, opacity: 0 }}
+    animate={{ scale: 1, opacity: 1 }}
+    transition={{ duration: 1.8, ease: 'easeOut' }}
+  />
 
-        {/* 🔹 Right Image (40%) — hidden on mobile */}
-        <div className="hidden md:block w-[40%] h-full relative">
-          <img
-            src={img11}
-            alt="Right visual"
-            className="h-full w-full object-cover"
-          />
-        </div>
+  {/* 🔹 Overlay */}
+  <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
-        {/* 🔹 Overlay to soften brightness */}
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+  {/* 🔹 Centered Hero Text */}
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1.2, ease: 'easeOut' }}
+    className="relative z-10 text-center text-white px-6"
+  >
+    <h1 className="font-pinyon text-6xl sm:text-7xl lg:text-8xl tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+      Roochi
+    </h1>
+  </motion.div>
 
-        {/* 🔹 Centered Hero Text */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
-          <h1 className="font-pinyon text-6xl lg:text-8xl tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
-            Roochi
-          </h1>
-        </div>
+  {/* 🔹 Scroll Hint */}
+  <motion.div
+    animate={{ y: [0, 10, 0] }}
+    transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+    className="absolute bottom-6 right-8 text-white text-sm tracking-widest opacity-80"
+  >
+    scroll ↓
+  </motion.div>
+</section>
 
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="absolute bottom-6 right-8 text-white text-sm tracking-widest opacity-80"
-        >
-          scroll ↓
-        </motion.div>
-      </section>
 
       <section>
         <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8 ">
